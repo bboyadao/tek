@@ -1,3 +1,4 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Commons](./commons.md)
+- [Python](./python.md)
