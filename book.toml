@@ -1,6 +1,8 @@
 [book]
-authors = ["BBOYADAO"]
+authors = ["Aaron"]
 language = "en"
 multilingual = true
 src = "src"
+description = "The example book covers examples."
 title = "dev-note"
+image = "img/thumb.jpg"

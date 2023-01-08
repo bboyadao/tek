@@ -1,5 +1,6 @@
 # Summary
 
+![aaa](../theme/img/thumb.jpg)
 - [Intro](./intro.md)
 - [Share](./share.md)
 - [Commons](./commons.md)
