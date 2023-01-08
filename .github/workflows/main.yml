@@ -21,8 +21,15 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v2
 
-      - name: Install dependencies 🔧
-        run: make install
+      - name: Install mdbook 🔧
+        run: |
+          mkdir mdbook
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.14/mdbook-v0.4.14-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
+          echo `pwd`/mdbook >> $GITHUB_PATH
+
+# too long use bin instead
+#      - name: Install dependencies 🔧
+#        run: make install
 
       - name: Build 🏗️
         run: make build
