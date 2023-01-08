@@ -5,3 +5,6 @@ multilingual = true
 src = "src"
 description = "Keep Knowledge Updating"
 title = "dev-note"
+
+[output.html]
+cname = "tek.adaoalive.com"
