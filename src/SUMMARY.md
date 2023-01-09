@@ -8,7 +8,7 @@
   - [Github-Action](./cicd/githubaction.md)
   - [Act](./cicd/act.md)
   - [Jenkins](./cicd/jenkins.md)
-  - [Gitlab-Ci](./cicd/githubaction.md)
+  - [Gitlab-Ci](./cicd/gitlabrunner.md)
   
 - [Rust](./rust.md)
   
