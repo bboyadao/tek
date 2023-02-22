@@ -14,6 +14,7 @@
   
 - [Python](./python.md)
   - [Django](./django.md)
+    - [Select and Prefetch to related](./django/select_prefetch.md)
   - [Celery](./celery.md)
 
 - [Snippet](./snippet.md)
