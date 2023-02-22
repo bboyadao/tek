@@ -1,3 +1,9 @@
+##### Some necessarily need to be added to new project. 
+
+Don't have time find on the internet.
+
+I'm too old to remember.
+
 ### INIT.
 
 ```shell

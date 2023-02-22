@@ -18,3 +18,4 @@
   - [Celery](./celery.md)
 
 - [Snippet](./snippet.md)
+  - [New Django Template](./snippet/new_django_proj.md)
