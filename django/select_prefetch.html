@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Select and Prefetch to related - dev-note</title>
+        <!-- Custom HTML head -->
+<!-- Book generated using mdBook -->
+<meta charset="UTF-8">
+<title>Intro - dev-note</title>
+
+<!-- Custom HTML head -->
+
+<meta name="description" content="Keep Knowledge Updating.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="rgba(0, 0, 0, 0)">
+
+<link rel="icon" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.png">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aaron technical sharing">
+<meta name="twitter:description" content="Keep Knowledge Updating">
+<meta name="twitter:image" content="img/thumb.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:url" content="/">
+<meta property="og:title" content="Aaron technical sharing">
+<meta property="og:image" content="img/thumb.jpg">
+<meta property="og:description" content="Keep Knowledge Updating">
+<meta property="og:site_name" content="Aaron technical sharing">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LGBM1Y6TB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LGBM1Y6TB1');
+</script>        <meta name="description" content="Keep Knowledge Updating">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item "><a href="../share.html"><strong aria-hidden="true">2.</strong> Share</a></li><li class="chapter-item "><a href="../commons.html"><strong aria-hidden="true">3.</strong> Commons</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../helper/vnstuff.html"><strong aria-hidden="true">3.1.</strong> VN helpers</a></li></ol></li><li class="chapter-item "><a href="../cicd.html"><strong aria-hidden="true">4.</strong> CI/CD</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../cicd/githubaction.html"><strong aria-hidden="true">4.1.</strong> Github-Action</a></li><li class="chapter-item "><a href="../cicd/act.html"><strong aria-hidden="true">4.2.</strong> Act</a></li><li class="chapter-item "><a href="../cicd/jenkins.html"><strong aria-hidden="true">4.3.</strong> Jenkins</a></li><li class="chapter-item "><a href="../cicd/gitlabrunner.html"><strong aria-hidden="true">4.4.</strong> Gitlab-Ci</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> Devops</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../devops/lxd.html"><strong aria-hidden="true">5.1.</strong> LXD</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.</strong> K8s</div></li><li class="chapter-item "><a href="../rust.html"><strong aria-hidden="true">7.</strong> Rust</a></li><li class="chapter-item "><a href="../python.html"><strong aria-hidden="true">8.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../python/timedelta.html"><strong aria-hidden="true">8.1.</strong> Year leap</a></li></ol></li><li class="chapter-item expanded "><a href="../django.html"><strong aria-hidden="true">9.</strong> Django</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/select_prefetch.html" class="active"><strong aria-hidden="true">9.1.</strong> Select and Prefetch to related</a></li><li class="chapter-item "><a href="../django/migrate_datatypes.html"><strong aria-hidden="true">9.2.</strong> Migrate schema and data</a></li></ol></li><li class="chapter-item "><a href="../celery.html"><strong aria-hidden="true">10.</strong> Celery</a></li><li class="chapter-item "><a href="../snippet.html"><strong aria-hidden="true">11.</strong> Snippet</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../snippet/new_django_proj.html"><strong aria-hidden="true">11.1.</strong> New Django Template</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">dev-note</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>All we understood this way help us keep away N+1 hit to the db, right?.</p>
+</blockquote>
+<h3 id="we-have-simple-models-here"><a class="header" href="#we-have-simple-models-here">We have simple models here.</a></h3>
+<pre><code class="language-python">class Author(models.Model):
+	name = models.CharField(max_length=255)
+
+	class Meta:
+		db_table = &quot;author&quot;
+
+class Tag(models.Model):
+	name = models.CharField(max_length=255)
+
+	class Meta:
+		db_table = &quot;tag&quot;
+
+class Book(models.Model):
+	name = models.CharField(max_length=255)
+	author = models.ForeignKey(Author, on_delete=models.CASCADE)
+	tag = models.ManyToManyField(Tag)
+
+	class Meta:
+		db_table = &quot;book&quot;
+</code></pre>
+<h2 id="1-select-related"><a class="header" href="#1-select-related">1. Select related</a></h2>
+<p>Now let's do some shell</p>
+<pre><code class="language-python">Book.objects.select_related(&quot;author&quot;)
+</code></pre>
+<pre><code class="language-sql">SELECT &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;,
+       &quot;author&quot;.&quot;id&quot;,
+       &quot;author&quot;.&quot;name&quot;
+  FROM &quot;book&quot;
+ INNER JOIN &quot;author&quot;
+    ON (&quot;book&quot;.&quot;author_id&quot; = &quot;author&quot;.&quot;id&quot;)
+ LIMIT 21
+
+Execution time: 0.000162s [Database: default]
+</code></pre>
+<pre><code class="language-python">Book.objects.select_related(&quot;tag&quot;)
+</code></pre>
+<pre><code class="language-shell">FieldError: Invalid field name(s) given in select_related: 'tag'. Choices are: author
+</code></pre>
+<p>Ooppppps </p>
+<p>Even you try </p>
+<pre><code class="language-python">Tag.objects.select_related('book')
+</code></pre>
+<p>That's will give you the same error too.</p>
+<blockquote>
+<p>For the <code>select_related</code> we can only use if the <code>ForeignKey</code> involves.</p>
+</blockquote>
+<h4 id="so-next-is-interesting-part"><a class="header" href="#so-next-is-interesting-part">So next is interesting part</a></h4>
+<h2 id="2-prefetch-related"><a class="header" href="#2-prefetch-related">2. Prefetch related.</a></h2>
+<pre><code class="language-sql">In [21]: Book.objects.prefetch_related(&quot;author&quot;)
+Out[21]: 
+SELECT &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;
+  FROM &quot;book&quot;
+ LIMIT 21
+
+Execution time: 0.000097s [Database: default]
+SELECT &quot;author&quot;.&quot;id&quot;,
+       &quot;author&quot;.&quot;name&quot;
+  FROM &quot;author&quot;
+ WHERE &quot;author&quot;.&quot;id&quot; IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+
+</code></pre>
+<p>And now for the tag</p>
+<pre><code class="language-sql">In [23]: Book.objects.prefetch_related(&quot;tag&quot;)
+Out[23]: 
+SELECT &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;
+  FROM &quot;book&quot;
+ LIMIT 21
+
+Execution time: 0.000102s [Database: default]
+SELECT (&quot;book_tag&quot;.&quot;book_id&quot;) AS &quot;_prefetch_related_val_book_id&quot;,
+       &quot;tag&quot;.&quot;id&quot;,
+       &quot;tag&quot;.&quot;name&quot;
+  FROM &quot;tag&quot;
+ INNER JOIN &quot;book_tag&quot;
+    ON (&quot;tag&quot;.&quot;id&quot; = &quot;book_tag&quot;.&quot;tag_id&quot;)
+ WHERE &quot;book_tag&quot;.&quot;book_id&quot; IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+</code></pre>
+<p>Hee it's worked either one of them is not <code>ManyToManyField</code>. There is no sign of any error as <code>select_related</code></p>
+<p>But very very different statements as you can see and compare.</p>
+<p>Wait what.. what is <code>book_tag</code> ? where do you come from?.</p>
+<p>It's the table's name auto generated by django. </p>
+<p>For the m2m relation we have to have a middle table to map both id's. </p>
+<p>We can show the table in our db.</p>
+<pre><code class="language-sql">sqlite&gt; 
+SELECT 
+    name
+FROM 
+    sqlite_schema
+WHERE 
+    type ='table' AND 
+    name NOT LIKE 'django_%' AND 
+    name NOT LIKE 'auth_%' AND 
+    name NOT LIKE 'sqlite_%';
+tag
+book
+book_tag
+ 
+SELECT * FROM book_tag;
+
+id  book_id  tag_id
+--  -------  ------
+1   1        2     
+2   1        1     
+4   1        3     
+...
+</code></pre>
+<p>That's explained why we got unmatch statement. </p>
+<p>We have to do more <code>JOIN</code> after get the tag's id, instead of go to destination as <code>author</code> does.</p>
+<h3 id="interested-part"><a class="header" href="#interested-part">Interested part</a></h3>
+<p>But in the Tag's view. How do i get the books contains this tag?.</p>
+<p>As we know the <code>Tag</code> connected to <code>Book</code> through <code>book_tag</code> right ?</p>
+<pre><code class="language-python">Tag.objects.filter().prefetch_related('book')
+</code></pre>
+<pre><code class="language-shell">AttributeError: Cannot find 'book' on Tag object, 'book' is an invalid parameter to prefetch_related()
+</code></pre>
+<p>Argggggggggggggggg that's why i expected more than 24hrs for a single day.</p>
+<p>Go to the docs as a usual? No!.</p>
+<pre><code class="language-python">In [35]: vars(Tag)
+Out[35]: 
+mappingproxy({'__module__': 'author.models',
+              '__doc__': 'Tag(id, name)',
+              '_meta': &lt;Options for Tag&gt;,
+              'DoesNotExist': author.models.Tag.DoesNotExist,
+              'MultipleObjectsReturned': author.models.Tag.MultipleObjectsReturned,
+              'name': &lt;django.db.models.query_utils.DeferredAttribute at 0x7ffa7c952260&gt;,
+              'id': &lt;django.db.models.query_utils.DeferredAttribute at 0x7ffa7c952380&gt;,
+              'objects': &lt;django.db.models.manager.ManagerDescriptor at 0x7ffa7c952320&gt;,
+              'book_set': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7ffa7c953610&gt;})
+</code></pre>
+<p>Did you see that <code>book_set</code> just apply it.</p>
+<pre><code class="language-sql">In [36]: Tag.objects.filter().prefetch_related('book_set')
+Out[36]: SELECT &quot;tag&quot;.&quot;id&quot;,
+       &quot;tag&quot;.&quot;name&quot;
+  FROM &quot;tag&quot;
+ LIMIT 21
+
+Execution time: 0.000046s [Database: default]
+SELECT (&quot;book_tag&quot;.&quot;tag_id&quot;) AS &quot;_prefetch_related_val_tag_id&quot;,
+       &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;
+  FROM &quot;book&quot;
+ INNER JOIN &quot;book_tag&quot;
+    ON (&quot;book&quot;.&quot;id&quot; = &quot;book_tag&quot;.&quot;book_id&quot;)
+ WHERE &quot;book_tag&quot;.&quot;tag_id&quot; IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+</code></pre>
+<h5 id="now-the-hack-is-_set"><a class="header" href="#now-the-hack-is-_set">Now the hack is <code>_set</code>.</a></h5>
+<p>Just <code>related_name</code> at the Python object level, not relate to sql stuff. If you dont set, django will use it as default.</p>
+<p>Now I added it. </p>
+<pre><code class="language-python">class Book(models.Model):
+	name = models.CharField(max_length=255)
+	author = models.ForeignKey(Author, on_delete=models.CASCADE)
+	tag = models.ManyToManyField(Tag, related_name='book')
+</code></pre>
+<p>And check it again.</p>
+<pre><code class="language-python">In [3]: vars(Tag)
+Out[3]: 
+mappingproxy({...
+              'name': &lt;django.db.models.query_utils.DeferredAttribute at 0x7fccd3436c20&gt;,
+              'id': &lt;django.db.models.query_utils.DeferredAttribute at 0x7fccd3436d40&gt;,
+              'objects': &lt;django.db.models.manager.ManagerDescriptor at 0x7fccd3436ce0&gt;,
+              'book': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7fccd3436860&gt;})
+
+</code></pre>
+<pre><code class="language-python">Tag.objects.filter().prefetch_related('book')
+&lt;QuerySet [...]&gt;
+</code></pre>
+<p>Hooray it's work as I expected!</p>
+<p>Now let's try with <code>ForeignKey</code> at the <code>Author</code> view</p>
+<pre><code class="language-python">Author.objects.filter().prefetch_related('book_set')
+&lt;QuerySet [...]&gt;
+</code></pre>
+<h4 id="works-like-a-champ"><a class="header" href="#works-like-a-champ">Works like a champ...</a></h4>
+<h3 id="more-salt"><a class="header" href="#more-salt">More salt?</a></h3>
+<p>If this <code>Tag</code> table have others relation than <code>Book</code> like a post, news, event, etc...</p>
+<p>Ok let's do it.</p>
+<p>i added new model below.</p>
+<pre><code class="language-python">class Post(models.Model):
+	name = models.CharField(max_length=255)
+	content = models.TextField()
+	tag = models.ManyToManyField(Tag)
+
+	class Meta:
+		db_table = &quot;post&quot;
+</code></pre>
+<p>Then run make/migrate.</p>
+<pre><code class="language-python">In [7]: vars(Tag)
+Out[7]: 
+mappingproxy({...
+              'objects': &lt;django.db.models.manager.ManagerDescriptor at 0x7fccd3436ce0&gt;,
+              'book': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7fccd3436860&gt;,
+              'post_set': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7fccd3435d80&gt;
+})
+</code></pre>
+<pre><code class="language-python">Post.objects.filter().prefetch_related('book_set')
+&lt;QuerySet []&gt;
+</code></pre>
+<p>Here it is!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../django.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../django/migrate_datatypes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../django.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../django/migrate_datatypes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

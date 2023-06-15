@@ -1,0 +1,900 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>dev-note</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+<!-- Book generated using mdBook -->
+<meta charset="UTF-8">
+<title>Intro - dev-note</title>
+
+<!-- Custom HTML head -->
+
+<meta name="description" content="Keep Knowledge Updating.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="rgba(0, 0, 0, 0)">
+
+<link rel="icon" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.png">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aaron technical sharing">
+<meta name="twitter:description" content="Keep Knowledge Updating">
+<meta name="twitter:image" content="img/thumb.jpg">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:url" content="/">
+<meta property="og:title" content="Aaron technical sharing">
+<meta property="og:image" content="img/thumb.jpg">
+<meta property="og:description" content="Keep Knowledge Updating">
+<meta property="og:site_name" content="Aaron technical sharing">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LGBM1Y6TB1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LGBM1Y6TB1');
+</script>        <meta name="description" content="Keep Knowledge Updating">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item "><a href="share.html"><strong aria-hidden="true">2.</strong> Share</a></li><li class="chapter-item "><a href="commons.html"><strong aria-hidden="true">3.</strong> Commons</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="helper/vnstuff.html"><strong aria-hidden="true">3.1.</strong> VN helpers</a></li></ol></li><li class="chapter-item "><a href="cicd.html"><strong aria-hidden="true">4.</strong> CI/CD</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="cicd/githubaction.html"><strong aria-hidden="true">4.1.</strong> Github-Action</a></li><li class="chapter-item "><a href="cicd/act.html"><strong aria-hidden="true">4.2.</strong> Act</a></li><li class="chapter-item "><a href="cicd/jenkins.html"><strong aria-hidden="true">4.3.</strong> Jenkins</a></li><li class="chapter-item "><a href="cicd/gitlabrunner.html"><strong aria-hidden="true">4.4.</strong> Gitlab-Ci</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> Devops</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="devops/lxd.html"><strong aria-hidden="true">5.1.</strong> LXD</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.</strong> K8s</div></li><li class="chapter-item "><a href="rust.html"><strong aria-hidden="true">7.</strong> Rust</a></li><li class="chapter-item "><a href="python.html"><strong aria-hidden="true">8.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="python/timedelta.html"><strong aria-hidden="true">8.1.</strong> Year leap</a></li></ol></li><li class="chapter-item "><a href="django.html"><strong aria-hidden="true">9.</strong> Django</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="django/select_prefetch.html"><strong aria-hidden="true">9.1.</strong> Select and Prefetch to related</a></li><li class="chapter-item "><a href="django/migrate_datatypes.html"><strong aria-hidden="true">9.2.</strong> Migrate schema and data</a></li></ol></li><li class="chapter-item "><a href="celery.html"><strong aria-hidden="true">10.</strong> Celery</a></li><li class="chapter-item "><a href="snippet.html"><strong aria-hidden="true">11.</strong> Snippet</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="snippet/new_django_proj.html"><strong aria-hidden="true">11.1.</strong> New Django Template</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">dev-note</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduce"><a class="header" href="#introduce">Introduce</a></h1>
+<p><img src="img/thumb.jpg" alt="aaaa" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="share"><a class="header" href="#share">Share</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="common-things-in-programing"><a class="header" href="#common-things-in-programing">Common things in programing...</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h4 id="vietnams-phone_regex"><a class="header" href="#vietnams-phone_regex">VIETNAM'S PHONE_REGEX</a></h4>
+<pre><code class="language-bash">'^(0[3|5|7|8|9])+([0-9]{8})$'
+</code></pre>
+<h4 id="vn-banks"><a class="header" href="#vn-banks">VN BANKS</a></h4>
+<pre><code class="language-python">from django.utils.translation import gettext as _
+
+list_bank_trans_vi = (
+	((&quot;ABB&quot;), (&quot;An Binh Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần An Bình&quot;)),
+	((&quot;ACB&quot;), (&quot;Asia Commercial Joint-stock Bank - Ngân hàng thương mại cổ phần Á châu&quot;)),
+	((&quot;AGRIBANK&quot;), (
+		&quot;Vietnam Bank for Agriculture and Rural Development - Agribank - Ngân hàng nông nghiệp và phát triển nông thông Việt Nam&quot;)),
+	((&quot;BACABANK&quot;), (&quot;Bac A Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Bắc Á&quot;)),
+	((&quot;BID&quot;), (
+		&quot;Joint Stock Commercial Bank for Investment and Development of Vietnam - Ngân hàng thương mại cổ phần đầu tư và phát triển Việt Nam&quot;)),
+	((&quot;CTG&quot;), (
+		&quot;Vietnam Joint-Stock Commercial Bank for Industry and Trade - Ngân hàng thương mại cổ phần công thương Việt Nam&quot;)),
+	((&quot;EIB&quot;),
+	 (&quot;Vietnam Export Import Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần xuất nhập khẩu Việt Nam&quot;)),
+	((&quot;HDBANK&quot;),
+	 (&quot;Ho Chi Minh City Development Joint Stock Commercial Bank - Ngân hàng thương mại cổ phần phát triển TP.HCM&quot;)),
+	((&quot;KLB&quot;), (&quot;Kien Long Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Kiên Long&quot;)),
+	((&quot;LIENVIET&quot;), (&quot;Lien Viet Post Joint Stock Commercial Bank - Ngân hàng thương mại cổ phần bưu điện Liên Việt&quot;)),
+	((&quot;MBB&quot;), (&quot;Military Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần quân đội&quot;)),
+	((&quot;MSB&quot;), (&quot;Vietnam Maritime Commercial Stock Bank - Ngân hàng thương mại cổ phần hàng hải Việt Nam&quot;)),
+	((&quot;NAMA&quot;), (&quot;Nam A Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Nam Á&quot;)),
+	((&quot;NCB&quot;), (&quot;National Citizen Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần quốc dân&quot;)),
+	((&quot;OCB&quot;), (
+		&quot;Orient Commercial Joint Stock Bank-Ngan Hang Thuong Mai Co Phan Phuong Dong - Ngân hàng thương mại cổ phần Phương Đông&quot;)),
+	((&quot;PGBANK&quot;),
+	 (&quot;Petrolimex Group Commercial Joint Stock Bank (The) - Ngân hàng thương mại cổ phần xăng dầu PETROLIMEX&quot;)),
+	((&quot;PVCOMBANK&quot;), (&quot;Vietnam Public Joint Stock Commercial Bank - Ngân hàng thương mại cổ phần đại chúng Việt Nam&quot;)),
+	((&quot;SCB&quot;), (&quot;Sai Gon Joint Stock Commercial Bank - Ngân hàng thương mại cổ phần Sài Gòn&quot;)),
+	((&quot;SEABANK&quot;), (&quot;Southeast Asia Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Đông Nam Á&quot;)),
+	((&quot;SGB&quot;), (&quot;Saigon Bank for Industry and Trade - Ngân hàng thương mại cổ phần Sài Gòn công thương&quot;)),
+	((&quot;SHB&quot;), (&quot;Saigon - Hanoi Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Sài Gòn - Hà Nội&quot;)),
+	((&quot;STB&quot;),
+	 (&quot;Saigon Thuong Tin Commercial Joint-Stock Bank- SACOMBANK - Ngân hàng thương mại cổ phần Sài Gòn thương tín&quot;)),
+	((&quot;TCB&quot;),
+	 (&quot;Vietnam Technological and Commercial Joint-Stock Bank - Ngân hàng thương mại cổ phần kỹ thương Việt Nam&quot;)),
+	((&quot;TPB&quot;), (&quot;Tien Phong Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Tiên Phong&quot;)),
+	((&quot;VCB&quot;), (
+		&quot;Joint Stock Commercial Bank for Foreign Trade of Vietnam- VIETCOMBANK - Ngân hàng thương mại cổ phần ngoại thương Việt Nam&quot;)),
+	((&quot;VIB&quot;), (&quot;VietNam International Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần quốc tế Việt Nam&quot;)),
+	((&quot;VIETABANK&quot;), (&quot;Vietnam Asia Commercial Joint - Ngân hàng thương mại cổ phần Việt Á&quot;)),
+	((&quot;VIETCAPITALBANK&quot;), (&quot;Viet Capital Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Bản Việt&quot;)),
+	((&quot;VPB&quot;), (&quot;Vietnam Prosperity Joint Stock Commercial Bank - Ngân hàng thương mại cổ phần Việt Nam thịnh vượng&quot;)),
+	((&quot;VIETBANK&quot;),
+	 (&quot;Vietnam Thuong Tin Commercial Joint Stock Bank - Ngân hàng thương mại cổ phần Việt Nam Thương Tín&quot;)),
+)
+
+vn_banks = (
+	((&quot;ABB&quot;), _(&quot;An Binh Commercial Joint Stock Bank&quot;)),
+	((&quot;ACB&quot;), _(&quot;Asia Commercial Joint-stock Bank&quot;)),
+	((&quot;AGRIBANK&quot;), _(&quot;Vietnam Bank for Agriculture and Rural Development - Agribank&quot;)),
+	((&quot;BACABANK&quot;), _(&quot;Bac A Commercial Joint Stock Bank&quot;)),
+	((&quot;BID&quot;), _(&quot;Joint Stock Commercial Bank for Investment and Development of Vietnam&quot;)),
+	((&quot;CTG&quot;), _(&quot;Vietnam Joint-Stock Commercial Bank for Industry and Trade&quot;)),
+	((&quot;EIB&quot;), _(&quot;Vietnam Export Import Commercial Joint Stock Bank&quot;)),
+	((&quot;HDBANK&quot;), _(&quot;Ho Chi Minh City Development Joint Stock Commercial Bank&quot;)),
+	((&quot;KLB&quot;), _(&quot;Kien Long Commercial Joint Stock Bank&quot;)),
+	((&quot;LIENVIET&quot;), _(&quot;Lien Viet Post Joint Stock Commercial Bank&quot;)),
+	((&quot;MBB&quot;), _(&quot;Military Commercial Joint Stock Bank&quot;)),
+	((&quot;MSB&quot;), _(&quot;Vietnam Maritime Commercial Stock Bank&quot;)),
+	((&quot;NAMA&quot;), _(&quot;Nam A Commercial Joint Stock Bank&quot;)),
+	((&quot;NCB&quot;), _(&quot;National Citizen Commercial Joint Stock Bank&quot;)),
+	((&quot;OCB&quot;), _(&quot;Orient Commercial Joint Stock Bank-Ngan Hang Thuong Mai Co Phan Phuong Dong&quot;)),
+	((&quot;PGBANK&quot;), _(&quot;Petrolimex Group Commercial Joint Stock Bank (The)&quot;)),
+	((&quot;PVCOMBANK&quot;), _(&quot;Vietnam Public Joint Stock Commercial Bank&quot;)),
+	((&quot;SCB&quot;), _(&quot;Sai Gon Joint Stock Commercial Bank&quot;)),
+	((&quot;SEABANK&quot;), _(&quot;Southeast Asia Commercial Joint Stock Bank&quot;)),
+	((&quot;SGB&quot;), _(&quot;Saigon Bank for Industry and Trade&quot;)),
+	((&quot;SHB&quot;), _(&quot;Saigon - Hanoi Commercial Joint Stock Bank&quot;)),
+	((&quot;STB&quot;), _(&quot;Saigon Thuong Tin Commercial Joint-Stock Bank- SACOMBANK&quot;)),
+	((&quot;TCB&quot;), _(&quot;Vietnam Technological and Commercial Joint-Stock Bank&quot;)),
+	((&quot;TPB&quot;), _(&quot;Tien Phong Commercial Joint Stock Bank&quot;)),
+	((&quot;VCB&quot;), _(&quot;Joint Stock Commercial Bank for Foreign Trade of Vietnam- VIETCOMBANK&quot;)),
+	((&quot;VIB&quot;), _(&quot;VietNam International Commercial Joint Stock Bank&quot;)),
+	((&quot;VIETABANK&quot;), _(&quot;Vietnam Asia Commercial Joint&quot;)),
+	((&quot;VIETCAPITALBANK&quot;), _(&quot;Viet Capital Commercial Joint Stock Bank&quot;)),
+	((&quot;VPB&quot;), _(&quot;Vietnam Prosperity Joint Stock Commercial Bank&quot;)),
+	((&quot;VIETBANK&quot;), _(&quot;Vietnam Thuong Tin Commercial Joint Stock Bank&quot;)),
+)
+
+</code></pre>
+<h4 id="vietnam-e-wallets"><a class="header" href="#vietnam-e-wallets">VIETNAM E-WALLETS</a></h4>
+<pre><code class="language-python">wallet_vn = [
+    &quot;MoMo&quot;,
+    &quot;ViettelPay&quot;,
+    &quot;ZaloPay&quot;,
+    &quot;VTC Pay &quot;,
+    &quot;Payoo &quot;,
+    &quot;ShopeePay&quot;,
+    &quot;VNPay&quot;,
+    &quot;Moca&quot;,
+    &quot;Vimo&quot;,
+    &quot;VinID&quot;,
+]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="there-are-so-many-tool-can-help-us-to-deploy-application-more-easily"><a class="header" href="#there-are-so-many-tool-can-help-us-to-deploy-application-more-easily">There are so many tool can help us to deploy application more easily.</a></h3>
+<ul>
+<li><a href="githubaction.html">Github-Action</a></li>
+<li><a href="act.html">Act</a></li>
+<li><a href="gitlabrunner.html">Gitlab-Ci</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="github-action"><a class="header" href="#github-action">Github-Action</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="act"><a class="header" href="#act">ACT</a></h2>
+<p><a href="https://github.com/nektos/act">https://github.com/nektos/act</a></p>
+<p>Github-action does not support locally as <code>gitlab-runner exec ...</code> like <a href="https://gitlab.com/gitlab-org/gitlab-runner">this</a>.</p>
+<p>So this tool is play ground at the local. </p>
+<p>Thus we can work around before publish with dirty empty commits </p>
+<pre><code class="language-bash">git commit --allow-empty -m &quot;Empty-Commit&quot; &amp;&amp; git push
+</code></pre>
+<p>That makes sense versioning control, team work.</p>
+<pre><code class="language-bash">act -g | l ...
+act --help
+</code></pre>
+<p>Ship with <a href="https://github.com/nektos/act#flags">input</a> and <a href="https://github.com/nektos/act/issues/279">var &amp;&amp; env</a></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>println!(&quot;aaaa&quot;);
+<span class="boring">}
+</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="jenkins"><a class="header" href="#jenkins">Jenkins</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="gitlab"><a class="header" href="#gitlab">gitlab</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><hr />
+<h5 id="just-in-case-ipv4-does-not-assign-to-container"><a class="header" href="#just-in-case-ipv4-does-not-assign-to-container">Just in case ipv4 does not assign to container.</a></h5>
+<pre><code class="language-shell">sudo firewall-cmd --zone=trusted --change-interface=lxdbr0 --permanent
+sudo firewall-cmd --reload
+</code></pre>
+<h5 id="prevent-conflict-with-docker"><a class="header" href="#prevent-conflict-with-docker">Prevent conflict with Docker.</a></h5>
+<pre><code class="language-shell">iptables -I DOCKER-USER -i &lt;network_bridge&gt; -o &lt;external_interface&gt; -j ACCEPT
+iptables -I DOCKER-USER -o &lt;network_bridge&gt; -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+</code></pre>
+<h5 id="docker-inside-lxc"><a class="header" href="#docker-inside-lxc">Docker inside LXC.</a></h5>
+<pre><code class="language-shell">lxc storage create tower btrfs
+lxc storage volume create tower docker
+lxc config device add tower tower disk pool=tower source=docker path=/var/lib/docker
+lxc config set tower security.nesting=true security.syscalls.intercept.mknod=true security.syscalls.intercept.setxattr=true
+lxc restart tower
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="rust"><a class="header" href="#rust">Rust</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pythonista"><a class="header" href="#pythonista">Pythonista</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p>There are so many error caused by datetime. So I decided to write this article. </p>
+<p>Determine exact date and time with <code>timedelta</code><br />
+<code>timedelta</code> does not support year right?<br />
+that why we have to do more calculate<br />
+Let's use python built-in package <code>calendar</code>.</p>
+<pre><code class="language-python">import calendar
+from datetime import datetime
+
+days = 366 if calendar.isleap(datetime.now().year) else 365
+</code></pre>
+<p>For some details: send email hapy birthday for next year, count down event day, billing stuff, etc...
+Everything works fine if this year not leap.<br />
+What if I send an email happy new year on the day at the end of the year before?</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p>All we understood this way help us keep away N+1 hit to the db, right?.</p>
+</blockquote>
+<h3 id="we-have-simple-models-here"><a class="header" href="#we-have-simple-models-here">We have simple models here.</a></h3>
+<pre><code class="language-python">class Author(models.Model):
+	name = models.CharField(max_length=255)
+
+	class Meta:
+		db_table = &quot;author&quot;
+
+class Tag(models.Model):
+	name = models.CharField(max_length=255)
+
+	class Meta:
+		db_table = &quot;tag&quot;
+
+class Book(models.Model):
+	name = models.CharField(max_length=255)
+	author = models.ForeignKey(Author, on_delete=models.CASCADE)
+	tag = models.ManyToManyField(Tag)
+
+	class Meta:
+		db_table = &quot;book&quot;
+</code></pre>
+<h2 id="1-select-related"><a class="header" href="#1-select-related">1. Select related</a></h2>
+<p>Now let's do some shell</p>
+<pre><code class="language-python">Book.objects.select_related(&quot;author&quot;)
+</code></pre>
+<pre><code class="language-sql">SELECT &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;,
+       &quot;author&quot;.&quot;id&quot;,
+       &quot;author&quot;.&quot;name&quot;
+  FROM &quot;book&quot;
+ INNER JOIN &quot;author&quot;
+    ON (&quot;book&quot;.&quot;author_id&quot; = &quot;author&quot;.&quot;id&quot;)
+ LIMIT 21
+
+Execution time: 0.000162s [Database: default]
+</code></pre>
+<pre><code class="language-python">Book.objects.select_related(&quot;tag&quot;)
+</code></pre>
+<pre><code class="language-shell">FieldError: Invalid field name(s) given in select_related: 'tag'. Choices are: author
+</code></pre>
+<p>Ooppppps </p>
+<p>Even you try </p>
+<pre><code class="language-python">Tag.objects.select_related('book')
+</code></pre>
+<p>That's will give you the same error too.</p>
+<blockquote>
+<p>For the <code>select_related</code> we can only use if the <code>ForeignKey</code> involves.</p>
+</blockquote>
+<h4 id="so-next-is-interesting-part"><a class="header" href="#so-next-is-interesting-part">So next is interesting part</a></h4>
+<h2 id="2-prefetch-related"><a class="header" href="#2-prefetch-related">2. Prefetch related.</a></h2>
+<pre><code class="language-sql">In [21]: Book.objects.prefetch_related(&quot;author&quot;)
+Out[21]: 
+SELECT &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;
+  FROM &quot;book&quot;
+ LIMIT 21
+
+Execution time: 0.000097s [Database: default]
+SELECT &quot;author&quot;.&quot;id&quot;,
+       &quot;author&quot;.&quot;name&quot;
+  FROM &quot;author&quot;
+ WHERE &quot;author&quot;.&quot;id&quot; IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+
+</code></pre>
+<p>And now for the tag</p>
+<pre><code class="language-sql">In [23]: Book.objects.prefetch_related(&quot;tag&quot;)
+Out[23]: 
+SELECT &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;
+  FROM &quot;book&quot;
+ LIMIT 21
+
+Execution time: 0.000102s [Database: default]
+SELECT (&quot;book_tag&quot;.&quot;book_id&quot;) AS &quot;_prefetch_related_val_book_id&quot;,
+       &quot;tag&quot;.&quot;id&quot;,
+       &quot;tag&quot;.&quot;name&quot;
+  FROM &quot;tag&quot;
+ INNER JOIN &quot;book_tag&quot;
+    ON (&quot;tag&quot;.&quot;id&quot; = &quot;book_tag&quot;.&quot;tag_id&quot;)
+ WHERE &quot;book_tag&quot;.&quot;book_id&quot; IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+</code></pre>
+<p>Hee it's worked either one of them is not <code>ManyToManyField</code>. There is no sign of any error as <code>select_related</code></p>
+<p>But very very different statements as you can see and compare.</p>
+<p>Wait what.. what is <code>book_tag</code> ? where do you come from?.</p>
+<p>It's the table's name auto generated by django. </p>
+<p>For the m2m relation we have to have a middle table to map both id's. </p>
+<p>We can show the table in our db.</p>
+<pre><code class="language-sql">sqlite&gt; 
+SELECT 
+    name
+FROM 
+    sqlite_schema
+WHERE 
+    type ='table' AND 
+    name NOT LIKE 'django_%' AND 
+    name NOT LIKE 'auth_%' AND 
+    name NOT LIKE 'sqlite_%';
+tag
+book
+book_tag
+ 
+SELECT * FROM book_tag;
+
+id  book_id  tag_id
+--  -------  ------
+1   1        2     
+2   1        1     
+4   1        3     
+...
+</code></pre>
+<p>That's explained why we got unmatch statement. </p>
+<p>We have to do more <code>JOIN</code> after get the tag's id, instead of go to destination as <code>author</code> does.</p>
+<h3 id="interested-part"><a class="header" href="#interested-part">Interested part</a></h3>
+<p>But in the Tag's view. How do i get the books contains this tag?.</p>
+<p>As we know the <code>Tag</code> connected to <code>Book</code> through <code>book_tag</code> right ?</p>
+<pre><code class="language-python">Tag.objects.filter().prefetch_related('book')
+</code></pre>
+<pre><code class="language-shell">AttributeError: Cannot find 'book' on Tag object, 'book' is an invalid parameter to prefetch_related()
+</code></pre>
+<p>Argggggggggggggggg that's why i expected more than 24hrs for a single day.</p>
+<p>Go to the docs as a usual? No!.</p>
+<pre><code class="language-python">In [35]: vars(Tag)
+Out[35]: 
+mappingproxy({'__module__': 'author.models',
+              '__doc__': 'Tag(id, name)',
+              '_meta': &lt;Options for Tag&gt;,
+              'DoesNotExist': author.models.Tag.DoesNotExist,
+              'MultipleObjectsReturned': author.models.Tag.MultipleObjectsReturned,
+              'name': &lt;django.db.models.query_utils.DeferredAttribute at 0x7ffa7c952260&gt;,
+              'id': &lt;django.db.models.query_utils.DeferredAttribute at 0x7ffa7c952380&gt;,
+              'objects': &lt;django.db.models.manager.ManagerDescriptor at 0x7ffa7c952320&gt;,
+              'book_set': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7ffa7c953610&gt;})
+</code></pre>
+<p>Did you see that <code>book_set</code> just apply it.</p>
+<pre><code class="language-sql">In [36]: Tag.objects.filter().prefetch_related('book_set')
+Out[36]: SELECT &quot;tag&quot;.&quot;id&quot;,
+       &quot;tag&quot;.&quot;name&quot;
+  FROM &quot;tag&quot;
+ LIMIT 21
+
+Execution time: 0.000046s [Database: default]
+SELECT (&quot;book_tag&quot;.&quot;tag_id&quot;) AS &quot;_prefetch_related_val_tag_id&quot;,
+       &quot;book&quot;.&quot;id&quot;,
+       &quot;book&quot;.&quot;name&quot;,
+       &quot;book&quot;.&quot;author_id&quot;
+  FROM &quot;book&quot;
+ INNER JOIN &quot;book_tag&quot;
+    ON (&quot;book&quot;.&quot;id&quot; = &quot;book_tag&quot;.&quot;book_id&quot;)
+ WHERE &quot;book_tag&quot;.&quot;tag_id&quot; IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+</code></pre>
+<h5 id="now-the-hack-is-_set"><a class="header" href="#now-the-hack-is-_set">Now the hack is <code>_set</code>.</a></h5>
+<p>Just <code>related_name</code> at the Python object level, not relate to sql stuff. If you dont set, django will use it as default.</p>
+<p>Now I added it. </p>
+<pre><code class="language-python">class Book(models.Model):
+	name = models.CharField(max_length=255)
+	author = models.ForeignKey(Author, on_delete=models.CASCADE)
+	tag = models.ManyToManyField(Tag, related_name='book')
+</code></pre>
+<p>And check it again.</p>
+<pre><code class="language-python">In [3]: vars(Tag)
+Out[3]: 
+mappingproxy({...
+              'name': &lt;django.db.models.query_utils.DeferredAttribute at 0x7fccd3436c20&gt;,
+              'id': &lt;django.db.models.query_utils.DeferredAttribute at 0x7fccd3436d40&gt;,
+              'objects': &lt;django.db.models.manager.ManagerDescriptor at 0x7fccd3436ce0&gt;,
+              'book': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7fccd3436860&gt;})
+
+</code></pre>
+<pre><code class="language-python">Tag.objects.filter().prefetch_related('book')
+&lt;QuerySet [...]&gt;
+</code></pre>
+<p>Hooray it's work as I expected!</p>
+<p>Now let's try with <code>ForeignKey</code> at the <code>Author</code> view</p>
+<pre><code class="language-python">Author.objects.filter().prefetch_related('book_set')
+&lt;QuerySet [...]&gt;
+</code></pre>
+<h4 id="works-like-a-champ"><a class="header" href="#works-like-a-champ">Works like a champ...</a></h4>
+<h3 id="more-salt"><a class="header" href="#more-salt">More salt?</a></h3>
+<p>If this <code>Tag</code> table have others relation than <code>Book</code> like a post, news, event, etc...</p>
+<p>Ok let's do it.</p>
+<p>i added new model below.</p>
+<pre><code class="language-python">class Post(models.Model):
+	name = models.CharField(max_length=255)
+	content = models.TextField()
+	tag = models.ManyToManyField(Tag)
+
+	class Meta:
+		db_table = &quot;post&quot;
+</code></pre>
+<p>Then run make/migrate.</p>
+<pre><code class="language-python">In [7]: vars(Tag)
+Out[7]: 
+mappingproxy({...
+              'objects': &lt;django.db.models.manager.ManagerDescriptor at 0x7fccd3436ce0&gt;,
+              'book': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7fccd3436860&gt;,
+              'post_set': &lt;django.db.models.fields.related_descriptors.ManyToManyDescriptor at 0x7fccd3435d80&gt;
+})
+</code></pre>
+<pre><code class="language-python">Post.objects.filter().prefetch_related('book_set')
+&lt;QuerySet []&gt;
+</code></pre>
+<p>Here it is!</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="1-same-kind"><a class="header" href="#1-same-kind">1. SAME KIND.</a></h2>
+<p>Base models</p>
+<pre><code class="language-python"># /product/models.py
+from django.db import models
+
+
+class Product(models.Model):
+	name = models.CharField(max_length=255)
+
+
+class Variant(models.Model):
+	name = models.CharField(max_length=255)
+	product = models.ForeignKey(Product, on_delete=models.CASCADE)
+	price = models.PositiveIntegerField()
+
+</code></pre>
+<p>i got my app name is <code>product</code> and register in <code>INSTALLED_APPS</code> settings</p>
+<p><code>price = models.PositiveIntegerField()</code> need to be decimal<br />
+there are db schema having some primitive type: char, int, varchar... another.<br />
+But for all it's just number and text.<br />
+Just simply to change the type to <code>DecimalField</code></p>
+<pre><code class="language-python">class Variant(models.Model):
+	name = models.CharField(max_length=255)
+	product = models.ForeignKey(Product, on_delete=models.CASCADE)
+	price = models.DecimalField(decimal_places=3, max_digits=999)
+</code></pre>
+<p>and then run make migration</p>
+<pre><code class="language-shell">python manage.py makemigrations product
+</code></pre>
+<pre><code class="language-python"># /product/migrations/0002_alter_variant_price.py
+# Generated by Django 4.1.7 on 2023-02-23 22:35
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        (&quot;product&quot;, &quot;0001_initial&quot;),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name=&quot;variant&quot;,
+            name=&quot;price&quot;,
+            field=models.DecimalField(decimal_places=3, max_digits=999),
+        ),
+    ]
+</code></pre>
+<p>Django will automate generate a new migration file base on our behavior as you can see above.<br />
+And then migrate it's </p>
+<pre><code class="language-shell">python manage.py migrate product
+</code></pre>
+<p>Now just find where we implemented this field and do more change logic, syntax, etc...<br />
+Everything will work.</p>
+<h5 id="well-its-just-a-simple-case-because-it-is-the-same-type-in-general-number"><a class="header" href="#well-its-just-a-simple-case-because-it-is-the-same-type-in-general-number">Well it's just a simple case, because it is the same type in general: <code>NUMBER</code></a></h5>
+<h2 id="2-new-field-based-on-existed-field"><a class="header" href="#2-new-field-based-on-existed-field">2. NEW FIELD BASED ON EXISTED FIELD.</a></h2>
+<p>Now we do harder from <code>int</code> to <code>datetime</code><br />
+I have a subscribes app like product above too.</p>
+<pre><code class="language-python"># subscribe/models.py
+class Subscriber(models.Model):
+	email = models.EmailField()
+	age = models.SmallIntegerField()
+</code></pre>
+<p>This model run so long ago and have a thousand records in it<br />
+For more logical and painful of code it's should be date of birth(DOB)<br />
+I have to migrate existed data to new type right?</p>
+<pre><code class="language-python">class Subscriber(models.Model):
+	email = models.EmailField()
+	age = models.SmallIntegerField()
+	dob = models.DateField()
+</code></pre>
+<p>Well just add a dob field and run make &amp; migrate.</p>
+<pre><code class="language-shell">python manage.py makemigrations
+It is impossible to add a non-nullable field 'dob' to subscriber without specifying a default. This is because the database needs something to populate existing rows.
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit and manually define a default value in models.py.
+Select an option: 
+</code></pre>
+<p>Ahhhh that it.<br />
+If i place <code>null=True</code> to attribute in the model's field that's will work perfectly within null value. But for what?</p>
+<p>So now we have to do more calculate for it.<br />
+Make a fresh migrate app from django template.</p>
+<pre><code class="language-shell">python manage.py makemigrations subscribe --name convert_age_dob --empty
+</code></pre>
+<p>and the output</p>
+<pre><code class="language-shell">Migrations for 'subscribe':
+  subscribe/migrations/0002_convert_age_dob.py
+</code></pre>
+<pre><code class="language-python"># subscribe/migrations/0002_convert_age_dob.py
+# Generated by Django 4.1.7 on 2023-02-23 23:09
+
+from django.db import migrations
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        (&quot;subscribe&quot;, &quot;0001_initial&quot;),
+    ]
+
+    operations = []
+</code></pre>
+<p>Here the battlefield<br />
+Need a function convert from age to DOB right ?</p>
+<pre><code class="language-python">from django.utils import timezone
+
+def age_to_dob(apps, schema_editor):
+    Subscriber = apps.get_model('subscribe', 'Subscriber')
+    today = timezone.now()
+    for sub in Subscriber.objects.all():
+        sub.dob = today.replace(year=today.year-sub.age)  # that too dirty but i'll fix it later
+        sub.save()
+</code></pre>
+<p>and let operation run it</p>
+<pre><code class="language-python">operations = [
+        migrations.RunPython(age_to_dob, migrations.RunPython.noop),
+]
+</code></pre>
+<p><code>migrations.RunPython.noop</code> is the step backward if we revert the migration. so for do nothing i added <code>noop</code></p>
+<h6 id="now-my-completed-migration-file-is"><a class="header" href="#now-my-completed-migration-file-is">Now my completed migration file is:</a></h6>
+<pre><code class="language-python"># Generated by Django 4.1.7 on 2023-02-23 23:09
+
+from django.db import migrations, models
+from django.utils import timezone
+
+
+def age_to_dob(apps, schema_editor):
+    Subscriber = apps.get_model('subscribe', 'Subscriber')
+    today = timezone.now()
+    for sub in Subscriber.objects.all():
+        sub.dob = today.replace(year=today.year-sub.age)  # that too dirty but i'll fix it later
+        sub.save()
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        (&quot;subscribe&quot;, &quot;0001_initial&quot;),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name='Subscriber',
+            name='dob',
+            field=models.DateField(null=True, default=None),
+            preserve_default=False,
+        ),
+        
+        migrations.RunPython(age_to_dob, migrations.RunPython.noop),
+
+        migrations.AlterField(
+            model_name='Subscriber',
+            name='dob',
+            field=models.DateField(),
+            preserve_default=True,
+        ),
+    ]
+
+</code></pre>
+<p>well a little big rigt ?<br />
+we have <code>migrations.AddField</code> anf <code>migrations.AlterField</code> it's just the trick to bypass not-null value from django migrate schema. cuz we need this always having data<br />
+Otherwise, you will get the error <code>django.db.utils.IntegrityError: NOT NULL constraint failed:...</code></p>
+<p>and run migrate this file.</p>
+<h2 id="3-same-field-and-different-type"><a class="header" href="#3-same-field-and-different-type">3. SAME FIELD AND DIFFERENT TYPE.</a></h2>
+<blockquote>
+<p>This is the hard part on refactor operation a projects.<br />
+Added new field and then copy data in to it will make many critical error on release and if we run in <code>container</code> we have to create lots of releases that's increment time and effort!</p>
+</blockquote>
+<p>As all we know. django model have <code>pk</code> default for your record, it is a <code>biginterger</code> and have <code>auto increment</code> on the back.<br />
+Now if we expose this to the public like id of post or user id. This way is the door to invites crawler get my own data. Cuz it's predictable.<br />
+So it must be unpredictable, by using uuid or other algorythm to create identify instead.<br />
+I got my user model here</p>
+<pre><code class="language-python">from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+
+class User(AbstractUser):
+	alias = models.CharField(max_length=255)
+    ...	
+</code></pre>
+<p>That run quite long ago and got a lot of users\ 
+At this if we call <code>.id</code> or <code>.pk</code> will return int for each record.<br />
+And tons of code implemented before take time to refactor. Would you add more field like <code>uuid</code> and then go to fix, add, delete old logic ???<br />
+NOOOOOOOOOOOOOOO! imma lazy guy. And i impl like this.</p>
+<pre><code class="language-python">import uuid
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+
+class User(AbstractUser):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    alias = models.CharField(max_length=255)
+    ...
+</code></pre>
+<p>Then make a function generate new id inside of migration stage.
+make it.</p>
+<pre><code class="language-python">user/migrations/0002_alter_user_id.py
+# Generated by Django 4.1.7 on 2023-02-24 01:14
+
+from django.db import migrations, models
+import uuid
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        (&quot;user&quot;, &quot;0001_initial&quot;),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name=&quot;user&quot;,
+            name=&quot;id&quot;,
+            field=models.UUIDField(
+                default=uuid.uuid4, editable=False, primary_key=True, serialize=False
+            ),
+        ),
+    ]
+</code></pre>
+<p>Django generated it for me. but it just applies to new record which insert in the future. what should I do for existed id.</p>
+<p>So i apply my flow here and run it without any error.</p>
+<pre><code class="language-python">from django.db import migrations, models
+import uuid
+
+
+def create_uuid(apps, schema_editor):
+    User = apps.get_model('user', 'User')
+    for user in list(User.objects.all()):
+        user.id = uuid.UUID(int=user.id)
+        user.save()
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        (&quot;user&quot;, &quot;0001_initial&quot;),
+    ]
+
+    operations = [
+        # add new one
+        migrations.AddField(
+            model_name='user',
+            name='uuid',
+            field=models.UUIDField(null=True),
+        ),
+        # seed new one
+        migrations.RunPython(create_uuid, migrations.RunPython.noop),
+
+        # change attributes
+        migrations.AlterField(
+            model_name='user',
+            name='uuid',
+            field=models.UUIDField(
+                default=uuid.uuid4, editable=False, primary_key=True, serialize=False
+            ),
+        ),
+
+        # remove old one
+        migrations.RemoveField('User', 'id'),
+
+        # rename to new
+        migrations.RenameField(
+            model_name='User',
+            old_name='uuid',
+            new_name='id'
+        ),
+
+        # Update attributes
+        migrations.AlterField(
+            model_name='user',
+            name='id',
+            field=models.UUIDField(
+                primary_key=True, default=uuid.uuid4, serialize=False, editable=False
+            ),
+        ),
+    ]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="celery"><a class="header" href="#celery">Celery</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snippet"><a class="header" href="#snippet">Snippet</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h5 id="some-necessarily-need-to-be-added-to-new-project"><a class="header" href="#some-necessarily-need-to-be-added-to-new-project">Some necessarily need to be added to new project.</a></h5>
+<p>Don't have time find on the internet.</p>
+<p>I'm too old to remember.</p>
+<h3 id="init"><a class="header" href="#init">INIT.</a></h3>
+<pre><code class="language-shell">gcl git@github.com:bboyadao/django_template.git proj_name \ 
+&amp;&amp; cd proj_name  \
+&amp;&amp; rm -rf .git
+&amp;&amp; git init
+
+poetry install
+</code></pre>
+<h3 id="settings"><a class="header" href="#settings">SETTINGS.</a></h3>
+<pre><code class="language-python">
+ALLOWED_HOSTS = [&quot;*&quot;]
+
+AUTH_APPS = [
+    &quot;rest_framework_simplejwt.token_blacklist&quot;,
+    &quot;oauth2_provider&quot;,
+    &quot;rest_framework.authtoken&quot;,
+    &quot;dj_rest_auth&quot;,
+    &quot;dj_rest_auth.registration&quot;,
+    &quot;allauth&quot;,
+    &quot;allauth.account&quot;,
+    &quot;allauth.socialaccount&quot;,
+    &quot;allauth.socialaccount.providers.facebook&quot;,
+    &quot;allauth.socialaccount.providers.google&quot;,
+]
+
+DOCS_APPS = [&quot;drf_spectacular&quot;,
+             &quot;drf_spectacular_sidecar&quot;]
+
+CELERY_APPS = [&quot;django_celery_results&quot;,
+               &quot;django_celery_beat&quot;]
+
+LIB_APPS = [&quot;rest_framework&quot;,
+            &quot;django_filters&quot;,
+            &quot;phonenumber_field&quot;,
+            &quot;corsheaders&quot;,
+            &quot;fcm_django&quot;,
+            &quot;actstream&quot;,
+            ]
+
+EXTERNAL_APPS = LIB_APPS + CELERY_APPS + AUTH_APPS + DOCS_APPS
+INTERNAL_APPS = []
+INSTALLED_APPS += EXTERNAL_APPS + INTERNAL_APPS
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
