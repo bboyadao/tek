@@ -3,6 +3,7 @@
 - [Intro](./intro.md)
 - [Share](./share.md)
 - [Commons](./commons.md)
+  -  [VN helpers](./helper/vnstuff.md)
 
 - [CI/CD](./cicd.md)
   - [Github-Action](./cicd/githubaction.md)
