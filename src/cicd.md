@@ -1,4 +1,4 @@
-### There are so many tool can help us to deploy application more easily.
+### There are so many tools that can help us deploy applications more easily.
 - [Github-Action](githubaction.md)
 - [Act](act.md)
 - [Gitlab-Ci](gitlabrunner.md)

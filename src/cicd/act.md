@@ -2,16 +2,16 @@
 
 [https://github.com/nektos/act](https://github.com/nektos/act)
 
-Github-action does not support locally as `gitlab-runner exec ...` like [this](https://gitlab.com/gitlab-org/gitlab-runner).
+GitHub Actions does not support local execution like `gitlab-runner exec ...` [here](https://gitlab.com/gitlab-org/gitlab-runner).
 
-So this tool is play ground at the local. 
+So this tool is a playground for local development.
 
-Thus we can work around before publish with dirty empty commits 
+Thus we can work around the issue before publishing with dirty empty commits 
 
 ```bash
 git commit --allow-empty -m "Empty-Commit" && git push
 ```
-That makes sense versioning control, team work.
+This makes sense for version control and teamwork.
 
 ```bash
 act -g | l ...

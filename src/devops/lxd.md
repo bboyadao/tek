@@ -1,6 +1,6 @@
 ---
 
-##### Just in case ipv4 does not assign to container. 
+##### Just in case IPv4 is not assigned to the container. 
 ```shell
 sudo firewall-cmd --zone=trusted --change-interface=lxdbr0 --permanent
 sudo firewall-cmd --reload
